@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Illfred</title>
+	<link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
+	<link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+<header>
+	<div class="content">
+
+<!-- Test Popup Here -->
+
+<a class="btn" data-popup-open="popup-1" href="#">Open Popup #1</a>
+ 
+<div class="popup" data-popup="popup-1">
+    <div class="popup-inner">
+        <img src="./resources/images/comic.jpg">
+        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+        <span class="text">On September 11 th 2001, images of the attack on the World Trade Center flashed across Television
+screens around the world. Paralyzed by a deadly cocktail of emotion, illFred stood in front of his
+television screen as hopeless and desperate as the rest of the world. As he watched people plunge to
+their deaths from the top of the towers, tears of anger, despair, fear and hopelessness welled in his
+eyes. After realizing that the horrific scenes he was witnessing were not part of a tragic movie or vivid
+nightmare, the air that felt like it was abruptly vacuumed from his lungs, rushed into his mouth as he
+gasped and caused him to gag. From that moment on, nothing would ever be the same.<br>
+The years that followed introduced an era of fear and uncertainty. It didn’t take long before America
+began to exhibit signs and symptoms of Post-Traumatic Stress Disorder (PTSD). Paranoia was prevalent
+throughout the Internet, various media outlets, airports, schools, public arenas and private sectors. The
+idea of embracing other cultures was replaced by intolerance. Before long, the dark veil of intolerance
+was lifted and the intolerant were empowered and encouraged to practice discrimination candidly.
+America demonstrated that its roots of hatred were still alive and growing.<br>
+In the year 2017, America continues to be plagued by corruption, bigotry, injustice, hatred and
+destruction. The systems that were set in place to serve the needs and protect the rights of the people
+have failed time and time again. While some people live lavishly, others suffer socio-economic
+disparities. Crime syndicates such as &lt;some&gt; street gangs, hate groups, religious extremists, law
+enforcement officials and the likes of them, terrorize communities. Media outlets distort the facts to
+align with their agendas. Leaders deceive and mislead, all-the- while inciting dissension amongst the
+masses. Although these symptoms are not unique to America and seem to be a part of a world-wide
+epidemic that is infecting the global populous, it is spreading throughout the U.S. rapidly and has already
+rendered fatal outcomes.<br>
+Terrifying images continue to flash across television and computer screens throughout. The real world is
+filled with tragic scenes that horrific nightmares are made of. Although the world continues down it’s
+destructive course, illFred has moved passed the paralysis and is using his voice to lead a group of
+“illites” in the opposite direction. He is leading the march against social injustice and cultivating a culture
+of hope, equality, justice and peace.<br>
+Join illFred in the fight against oppressors. Help him foster a culture of moral aptitude and resist the
+declining trend. Join the cultural illites as they seek to fight for justice and reform the “Trumped Nation”
+
+<a data-popup-close="popup-1" href="#">Close</a>
+
+</span>
+    </div>
+</div>
+
+<!-- End Popup Test -->
+
+	</div>
+</header>
+<footer>
+<script>$(function() {
+    //----- OPEN
+    $('[data-popup-open]').on('click', function(e)  {
+        var targeted_popup_class = jQuery(this).attr('data-popup-open');
+        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+ 
+        e.preventDefault();
+    });
+ 
+    //----- CLOSE
+    $('[data-popup-close]').on('click', function(e)  {
+        var targeted_popup_class = jQuery(this).attr('data-popup-close');
+        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+ 
+        e.preventDefault();
+    });
+});
+</script>
+</footer>
+</body>
+</html>
